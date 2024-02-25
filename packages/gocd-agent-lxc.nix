@@ -2,6 +2,8 @@
 let
   nixosModule = { config, lib, pkgs, ... }: {
     config = {
+      disabledModules = [ "${modulesPath}/services/continuous-integration/gocd-agent/default.nix" ];
+      imports = [ "${inputs.s}/nixos/modules/services/continuous-integration/gocd-agent/default.nix" ];
       services = {
         gocd-agent = {
           enable = true;
