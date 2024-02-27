@@ -21,9 +21,9 @@
         };
       };
       hydraJobs = {
-        gocd-agent-proxmox-lxc = self.packages.x86_64-linux.gocd-agent-lxc;
-        gocd-agent-proxmox = self.packages.x86_64-linux.gocd-agent-lxc;
-        gocd-agent-docker = self.packages.x86_64-linux.gocd-agent-lxc;
+        gocd-agent-proxmox-lxc = self.packages.x86_64-linux.gocd-agent-proxmox-lxc;
+        gocd-agent-proxmox = self.packages.x86_64-linux.gocd-agent-proxmox;
+        gocd-agent-docker = self.packages.x86_64-linux.gocd-agent-docker;
       };
     };
 }
