@@ -1,6 +1,6 @@
-{ inputs, modulesPath, ... }@flakeContext:
+{ inputs, ... }@flakeContext:
 let
-  nixosModule = { config, lib, pkgs, ... }: {
+  nixosModule = { config, lib, pkgs, self, modulesPath, ... }: {
     config = {
       disabledModules = [ "${modulesPath}/services/continuous-integration/gocd-agent/default.nix" ];
       imports = [ "${inputs.s}/nixos/modules/services/continuous-integration/gocd-agent/default.nix" ];
