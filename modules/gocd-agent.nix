@@ -1,12 +1,4 @@
-{
-  config,
-  inputs,
-  lib,
-  modulesPath,
-  pkgs,
-  ...
-}:
-{
+{ inputs, modulesPath, ... }:{
   disabledModules = [ "${modulesPath}/services/continuous-integration/gocd-agent/default.nix" ];
   imports = [ "${inputs.s}/nixos/modules/services/continuous-integration/gocd-agent/default.nix" ];
   config = {
@@ -16,4 +8,3 @@
     };
   };
 }
-

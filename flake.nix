@@ -15,13 +15,13 @@
     {
       packages = {
         x86_64-linux = {
-          gocd-agent-proxmox-lxc = import ./packages/gocd-agent-proxmox-lxc.nix flakeContext;
+          gocd-agent-lxc = import ./packages/gocd-agent-lxc.nix flakeContext;
           gocd-agent-proxmox = import ./packages/gocd-agent-proxmox.nix flakeContext;
           gocd-agent-docker = import ./packages/gocd-agent-docker.nix flakeContext;
         };
       };
       hydraJobs = {
-        gocd-agent-proxmox-lxc = self.packages.x86_64-linux.gocd-agent-proxmox-lxc;
+        gocd-agent-lxc = self.packages.x86_64-linux.gocd-agent-lxc;
         gocd-agent-proxmox = self.packages.x86_64-linux.gocd-agent-proxmox;
         gocd-agent-docker = self.packages.x86_64-linux.gocd-agent-docker;
       };
